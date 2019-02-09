@@ -38,12 +38,9 @@ class ProfileController extends Controller
       //Profile Modelからデータを取得する
       $profile = Profile::orderBy('created_at', 'desc')->first();
 
-      $Profilehistory = new ProfileHistory;
-      $Profilehistory->profile_id = $profile->id;
-      $Profilehistory->edited_at = Carbon::now();
-      $Profilehistory->save();
+      $profilehistory = ProfileHistory::all();
 
-      return view('admin.profile.edit',['profile_form' => $profile]);
+      return view('admin.profile.edit', ['profile_form' => $profile, 'profilehistory' => $profilehistory]);
     }
 
     public function update(Request $request)
