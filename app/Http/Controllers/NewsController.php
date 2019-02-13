@@ -33,8 +33,8 @@ class NewsController extends Controller
 
   public function profile()
   {
-      $profiles = Profile::all();
+    $profile = Profile::orderBy('created_at', 'desc')->first();
 
-      return view('news.profile',['profiles' => $profiles]);
+      return view('news.profile',['profile' => $profile]);
   }
 }

@@ -11,19 +11,19 @@
   </tr>
   <tr align="center">
     <td>氏名</td>
-    <td>{{$profiles[0]->name}}</td>
+    <td>{{$profile->name}}</td>
   </tr>
   <tr align="center">
     <td>性別</td>
-    <td>{{$profiles[0]->gender}}</td>
+    <td>{{$profile->gender}}</td>
   </tr>
   <tr align="center">
     <td>趣味</td>
-    <td>{{$profiles[0]->hobby}}</td>
+    <td>{{$profile->hobby}}</td>
   </tr>
   <tr align="center">
   <td>自己紹介欄</td>
-  <td>{{$profiles[0]->introduction}}</td>
+  <td>{{$profile->introduction}}</td>
   </tr>
 </table>
 </center>
